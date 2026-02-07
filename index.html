@@ -285,6 +285,7 @@
     standings.forEach(li => {
       const pts = parseInt(li.getAttribute('data-points'), 10);
       const bar = li.querySelector('.bar');
+      const color = li.getAttribute('data-color') || '#1e3c72'; // fallback
       const pointsLabel = li.querySelector('.points');
 
       const widthPercent = (pts / maxPoints) * 100;
@@ -294,4 +295,5 @@
   </script>
 </body>
 </html>
+
 
