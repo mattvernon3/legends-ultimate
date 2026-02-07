@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legends Ultimate</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f7fa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .header-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .header-content img {
+      width: 160px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 1px;
+    }
+
+    .header-text p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      border-bottom: 3px solid #2a5298;
+      display: inline-block;
+      padding-bottom: 0.25rem;
+    }
+
+    /* Standings */
+    .standings {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      margin-bottom: 3rem;
+    }
+
+    .standings ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .standings li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .standings .team-name {
+      width: 150px;
+      font-weight: 600;
+    }
+
+    .standings .bar-container {
+      flex-grow: 1;
+      height: 24px;
+      background: #e0e5ef;
+      border-radius: 12px;
+      margin: 0 1rem;
+      overflow: hidden;
+    }
+
+    .standings .bar {
+      height: 100%;
+      background: linear-gradient(90deg, #1e3c72, #2a5298);
+      border-radius: 12px 0 0 12px;
+      width: 0;
+      transition: width 0.8s ease;
+    }
+
+    .standings .points {
+      width: 50px;
+      text-align: right;
+      font-weight: 500;
+      color: #333;
+    }
+
+    /* Tournaments */
+    .tournament-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .tournament {
+      background: white;
+      border-radius: 10px;
+      padding: 1.25rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .tournament h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: #1e3c72;
+    }
+
+    .meta span {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .meta a {
+      color: #2a5298;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .meta a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <img src="jackhammer.jpg" alt="Legends">
+
+      <div class="header-text">
+        <h1>Legends Ultimate</h1>
+        <p>Legends Division Ultimate Frisbee</p>
+      </div>
+
+      <img src="fast.jpg" alt="Legends">
+    </div>
+  </header>
+
+  <main>
+
+    <h2>Legends Trophy Standings</h2>
+    <section class="standings">
+      <ul>
+        <li data-points="8">
+          <span class="team-name">Triaged 6.0</span>
+          <div class="bar-container"><div class="bar"></div></div>
+          <span class="points">8 pts</span>
+        </li>
+        <li data-points="4">
+          <span class="team-name">One Foot In</span>
+          <div class="bar-container"><div class="bar"></div></div>
+          <span class="points">4 pts</span>
+        </li>
+        <li data-points="6">
+          <span class="team-name">Old Wave</span>
+          <div class="bar-container"><div class="bar"></div></div>
+          <span class="points">6 pts</span>
+        </li>
+        <li data-points="5">
+          <span class="team-name">Legends of the Stall</span>
+          <div class="bar-container"><div class="bar"></div></div>
+          <span class="points">5 pts</span>
+        </li>
+        <li data-points="3">
+          <span class="team-name">JackHammers</span>
+          <div class="bar-container"><div class="bar"></div></div>
+          <span class="points">3 pts</span>
+        </li>
+        <li data-points="2">
+          <span class="team-name">Vicious Cycle</span>
+          <div class="bar-container"><div class="bar"></div></div>
+          <span class="points">2 pts</span>
+        </li>
+      </ul>
+    </section>
+
+    <h2>2026 Tournaments</h2>
+
+    <div class="tournament-list">
+      <div class="tournament">
+        <h3>Fountain of Youth Classic</h3>
+        <div class="meta">
+          <span>📍 Orlando, FL</span>
+          <span>📅 Dates: TBD</span>
+          <span>🔗 <a href="https://orlandoultimate.org/tfoyc.html" target="_blank">Visit site</a></span>
+        </div>
+      </div>
+
+      <div class="tournament">
+        <h3>Fire on the Bayou</h3>
+        <div class="meta">
+          <span>📍 New Orleans</span>
+          <span>📅 Dates: TBD</span>
+          <span>🔗 <a href="https://nolaultimate.com/e/fire-on-the-bayou-2026" target="_blank">Visit site</a></span>
+        </div>
+      </div>
+
+      <div class="tournament">
+        <h3>Strip Mine</h3>
+        <div class="meta">
+          <span>📍 Las Vegas</span>
+          <span>📅 Dates: TBD</span>
+          <span>🔗 <a href="https://lvultimate.ultimatecentral.com/e/strip-mine-2026" target="_blank">Visit site</a></span>
+        </div>
+      </div>
+
+      <div class="tournament">
+        <h3>Chicago Sandblast</h3>
+        <div class="meta">
+          <span>📍 Chicago, IL</span>
+          <span>📅 Dates: TBD</span>
+          <span>🔗 <a href="https://chicagosandblast.com/e/sandblast-2026-adult" target="_blank">Visit site</a></span>
+        </div>
+      </div>
+
+      <div class="tournament">
+        <h3>Sarasota Sunset</h3>
+        <div class="meta">
+          <span>📍 Sarasota, FL</span>
+          <span>📅 Dates: TBD</span>
+          <span>🔗 <a href="https://oshadega.com/tournaments/sunset/" target="_blank">Visit site</a></span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Legends Ultimate
+  </footer>
+
+  <script>
+    // Set current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Dynamic bars
+    const standings = document.querySelectorAll('.standings li');
+    let maxPoints = 0;
+
+    // Find maximum points
+    standings.forEach(li => {
+      const pts = parseInt(li.getAttribute('data-points'), 10);
+      if (pts > maxPoints) maxPoints = pts;
+    });
+
+    // Set bar widths and display points
+    standings.forEach(li => {
+      const pts = parseInt(li.getAttribute('data-points'), 10);
+      const bar = li.querySelector('.bar');
+      const pointsLabel = li.querySelector('.points');
+
+      const widthPercent = (pts / maxPoints) * 100;
+      bar.style.width = widthPercent + '%';
+      pointsLabel.textContent = pts + ' pts';
+    });
+  </script>
+</body>
+</html>
