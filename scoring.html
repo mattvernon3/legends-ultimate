@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scoring - Legends Ultimate</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f7fa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .header-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .header-content img {
+      width: 160px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 1px;
+    }
+
+    .header-text p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      border-bottom: 3px solid #2a5298;
+      display: inline-block;
+      padding-bottom: 0.25rem;
+    }
+
+    .content-box {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.6rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #2a5298;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-content">
+      <img src="jackhammer.jpg" alt="Legends">
+      <div class="header-text">
+        <h1>Legends Ultimate</h1>
+        <p>The Games Never End</p>
+      </div>
+      <img src="fast.jpg" alt="Legends">
+    </div>
+  </header>
+
+  <main>
+    <h2>Scoring System</h2>
+
+    <div class="content-box">
+      <p>
+        Below is the scoring structure for the Legends Trophy.
+        
+      </p>
+
+      <ul>
+        <li>Four points for 1st.</li>
+        <li>Three points for 2nd.</li>
+        <li>Two points for 3rd.</li>
+	<li>Sarasota Sunset will add one point to each of the above, and two points for 4th.</li>
+        <li>One point for attendance.</li>
+        <li>One point for each 2 FMP.</li>
+      </ul>
+
+      <a class="back-link" href="index.html">← Back to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Legends Ultimate
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
